@@ -27,7 +27,7 @@ builder.Services.AddSwaggerGen(options =>
     options.SwaggerDoc("v1", new OpenApiInfo
     {
         Version = "1.0",
-        Title = "File Manage API",
+        Title = "File Manager API",
         Description = "This is an API to manage files"
     });
 });
