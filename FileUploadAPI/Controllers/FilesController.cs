@@ -20,12 +20,12 @@ namespace FileUploadAPI.Controllers
         [HttpPost("upload")]
         [ProducesResponseType(StatusCodes.Status201Created)]
         [ProducesResponseType(StatusCodes.Status406NotAcceptable)]
-        public async Task<IActionResult> UploadFile(IFormFile file)
+        public async Task<IActionResult> UploadFile(IFormFile file=null)
         {
             try
             {
                 var filename = await _fileService.UploadFileAsync(file);
-                return Ok(new { Filename = filename });
+                return Ok(new { Message= "File created!", Data = filename });
             }
             catch (Exception ex)
             {
@@ -41,7 +41,7 @@ namespace FileUploadAPI.Controllers
             try
             {
                 var filesName = await _fileService.UploadFilesAsync(files);
-                return Ok(new { Filenames = filesName });
+                return Ok(new { Message = "Files created!", Data = filesName });
             }
             catch (Exception ex)
             {

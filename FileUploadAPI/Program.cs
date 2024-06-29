@@ -1,4 +1,6 @@
+using FileUploadAPI.Entities;
 using FileUploadAPI.Services;
+using FluentValidation;
 using Microsoft.OpenApi.Models;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -6,12 +8,16 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 
 builder.Services.AddControllers();
+
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 // Registering the FileService
 builder.Services.AddScoped<IFileService, FileService>();
+
+// Registering the Validators
+builder.Services.AddScoped<IValidator<FileUploadModel>, FileUploadModelValidator>();
 
 // Routes in lower case
 builder.Services.AddRouting(options => options.LowercaseUrls = true);

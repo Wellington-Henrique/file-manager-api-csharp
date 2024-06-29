@@ -1,10 +1,11 @@
 ﻿
+using FileUploadAPI.Entities;
+
 namespace FileUploadAPI.Services
 {
     public class FileService : IFileService
     {
         private readonly string _storagePath = Path.Combine(Directory.GetCurrentDirectory(), "Uploads");
-        private readonly long _fileSizeLimit = 1048576 * 1; // 1048576(bytes) * 1 = 1MB
 
         public FileService()
         {
@@ -16,11 +17,10 @@ namespace FileUploadAPI.Services
 
         public async Task<string> UploadFileAsync(IFormFile file)
         {
-            if (file == null || file.Length == 0)
-                throw new ArgumentException("File is invalid.");
+            var entity = new FileUploadModel(file);
 
-            if (file.Length > _fileSizeLimit)
-                throw new ArgumentException($"File size exceeds the limit of {_fileSizeLimit / (1024 * 1024)}MB.");
+            if (entity.IsInvalid(new FileUploadModelValidator()))
+                throw new ArgumentException(entity.ValidationResult.Errors.First().ErrorMessage);
 
             var uniqueFileName = GenerateUniqueFileName(file.FileName);
             var filePath = Path.Combine(_storagePath, uniqueFileName);
