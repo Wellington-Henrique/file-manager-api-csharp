@@ -18,6 +18,8 @@ namespace FileUploadAPI.Controllers
         }
 
         [HttpPost("upload")]
+        [ProducesResponseType(StatusCodes.Status201Created)]
+        [ProducesResponseType(StatusCodes.Status406NotAcceptable)]
         public async Task<IActionResult> UploadFile(IFormFile file)
         {
             try
@@ -32,6 +34,8 @@ namespace FileUploadAPI.Controllers
         }
 
         [HttpPost("upload-multiple")]
+        [ProducesResponseType(StatusCodes.Status201Created)]
+        [ProducesResponseType(StatusCodes.Status406NotAcceptable)]
         public async Task<IActionResult> UploadFiles(List<IFormFile> files)
         {
             try
@@ -46,6 +50,7 @@ namespace FileUploadAPI.Controllers
         }
 
         [HttpGet("download/{filename}")]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
         public async Task<IActionResult> GetFile(string filename)
         {
             try
@@ -64,6 +69,8 @@ namespace FileUploadAPI.Controllers
         }
 
         [HttpDelete("delete/{filename}")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
         public async Task<IActionResult> DeleteFile(string filename)
         {
             try
