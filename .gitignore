@@ -1,0 +1,195 @@
+# Ignore the Uploads folder
+Uploads/
+
+# Compiled object files
+*.o
+*.obj
+*.lo
+*.slo
+
+# Precompiled Headers
+*.gch
+*.pch
+
+# Compiled Dynamic libraries
+*.so
+*.dylib
+*.dll
+
+# Fortran module files
+*.mod
+*.smod
+
+# Compiled Static libraries
+*.lai
+*.la
+*.a
+*.lib
+
+# Executables
+*.exe
+*.out
+*.app
+*.i*86
+*.x86_64
+*.hex
+
+# Packages
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+
+# Backup & Logs
+*.bak
+*.log
+
+# Temporary Files
+*.tmp
+*.swp
+*.swo
+
+# ASP.NET Core
+project.lock.json
+project.fragment.lock.json
+artifacts/
+*.ide.csproj
+.idea/
+.vscode/
+
+# User-specific files
+*.rsuser
+*.user
+*.userosscache
+*.suo
+*.sln.docstates
+.vscode
+
+# Mono Auto Generated Files
+mono_crash.*
+
+# Windows image file caches
+Thumbs.db
+ehthumbs.db
+
+# Folder config file
+Desktop.ini
+
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
+
+# VS Code directories
+.vscode/
+.history/
+
+# ASP.NET Scaffolding
+ScaffoldingReadMe.txt
+
+# Visual Studio
+.vscode/
+.vs/
+.vscode/*
+.vscode/*
+
+# Visual Studio Code
+.vscode/
+
+# Rider
+.idea/
+
+# Node
+node_modules/
+npm-debug.log
+yarn-error.log
+__mocks__/
+
+# JetBrains Rider
+.idea/
+*.sln.iml
+
+# End of line handling
+*~
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+*.swp
+*~
+
+# Dotnet Core
+bin/
+obj/
+project.lock.json
+project.fragment.lock.json
+
+# Windows image file caches
+Thumbs.db
+ehthumbs.db
+
+# Folder config file
+Desktop.ini
+
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
+
+# NPM
+node_modules/
+
+# Lock files
+yarn.lock
+package-lock.json
+
+# Logs
+logs
+*.log
+npm-debug.log*
+
+# VS Code
+.vscode/*
+
+# Rider
+.idea/
+.idea/*
+
+# Visual Studio
+.vs/
+.vscode/
+*.csproj.user
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# NuGet
+*.nupkg
+*.snupkg
+.nuget/
+packages/
+**/packages/*.nupkg
+.nuget/packages/
+
+# ASP.NET Scaffolding
+ScaffoldingReadMe.txt
+
+# Windows image file caches
+Thumbs.db
+ehthumbs.db
+
+# Folder config file
+Desktop.ini
+
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
+
+# macOS
+.DS_Store
+.DS_Store?
+.AppleDouble
+.LSOverride
